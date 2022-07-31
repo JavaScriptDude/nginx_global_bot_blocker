@@ -15,10 +15,9 @@ map $http_user_agent $_global_bot_blocker {
 }
 
 ```
-Notes:
-    * The above can be adjusted to your preference
-    * The above config will block curl and wget unless you alter the 'User-Agent' header
+  * The above can be adjusted to your preference
+  * The above config will block curl and wget unless you alter the 'User-Agent' header
     
-  
+
 2) In the `location` block of your site, add the following `if ($_global_bot_blocker = 1) { return 403; }`
 
